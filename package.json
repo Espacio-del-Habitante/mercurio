@@ -1,0 +1,44 @@
+{
+  "name": "omnifetch",
+  "version": "1.0.0",
+  "description": "OmniFetch — descargador local de Instagram, YouTube y TikTok. Software open source Mercurio, por Espacio del Habitante.",
+  "keywords": [
+    "omnifetch",
+    "mercurio",
+    "instagram",
+    "youtube",
+    "tiktok",
+    "download",
+    "local-first",
+    "yt-dlp"
+  ],
+  "license": "MIT",
+  "author": "Espacio del Habitante",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Espacio-del-Habitante/mercurio.git"
+  },
+  "homepage": "https://github.com/Espacio-del-Habitante/mercurio",
+  "bugs": {
+    "url": "https://github.com/Espacio-del-Habitante/mercurio/issues"
+  },
+  "type": "module",
+  "bin": {
+    "omnifetch": "bin/cli.js",
+    "mercurio": "bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js",
+    "server": "node src/server.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "public",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  }
+}

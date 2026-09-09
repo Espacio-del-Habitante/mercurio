@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OmniFetch — Mercurio</title>
+  <meta name="description" content="Descarga local de Instagram, YouTube y TikTok. Sin anuncios, sin nube. Software Mercurio por Espacio del Habitante.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body data-platform="instagram">
+  <div class="space" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="top">
+    <a class="brand" href="/">
+      <img src="/favicon.svg" alt="" width="36" height="36">
+      <span>
+        <strong>OmniFetch</strong>
+        <small>powered by Mercurio</small>
+      </span>
+    </a>
+    <p class="org">Espacio del Habitante</p>
+  </header>
+
+  <main>
+    <p class="kicker">Local-first · sin anuncios · sin extensiones</p>
+    <h1>El archivo llega a tu disco.<br>Nadie más lo ve.</h1>
+    <p class="lede">Pega un enlace de Instagram, YouTube o TikTok. OmniFetch corre solo en tu ordenador.</p>
+
+    <div class="chips" role="tablist" aria-label="Plataforma">
+      <button type="button" class="chip is-active" data-platform="instagram" role="tab" aria-selected="true">Instagram</button>
+      <button type="button" class="chip" data-platform="youtube" role="tab" aria-selected="false">YouTube</button>
+      <button type="button" class="chip" data-platform="tiktok" role="tab" aria-selected="false">TikTok</button>
+    </div>
+
+    <form id="form" class="command" autocomplete="off">
+      <label class="sr-only" for="url">Enlace del video</label>
+      <input
+        id="url"
+        name="url"
+        type="url"
+        inputmode="url"
+        placeholder="Pega aquí el enlace"
+        required
+      >
+      <button id="paste" type="button" class="ghost">Pegar</button>
+      <button id="submit" type="submit">Traer</button>
+    </form>
+    <p id="hint" class="hint">Reel, publicación, Short o video. No perfiles, canales ni listas.</p>
+
+    <div id="status" class="status" hidden></div>
+    <section id="results" class="results" hidden></section>
+
+    <section id="idle" class="idle">
+      <p>Aún no hay nada. Copia un enlace público y pégalo arriba.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Úsalo con contenido tuyo o que tengas derecho a guardar.</p>
+    <p>OmniFetch · software <strong>Mercurio</strong> · MIT · <span id="host">127.0.0.1</span></p>
+  </footer>
+  <script src="/app.js"></script>
+</body>
+</html>
