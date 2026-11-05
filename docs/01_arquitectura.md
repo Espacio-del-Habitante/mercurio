@@ -23,7 +23,7 @@ Landing Vercel (`site/`) es HTML estático. No habla con yt-dlp.
 | Ruta | Rol |
 |------|-----|
 | `bin/cli.js` | Ejecutable: comprueba Python, instala yt-dlp, arranca el server |
-| `src/server.js` | HTTP en `127.0.0.1:3847`, API y estáticos |
+| `src/server.js` | HTTP en `0.0.0.0:3847` (casa: PC y celular), API y estáticos |
 | `public/` | UI OmniFetch |
 | `site/` | Landing para Vercel |
 | `docs/` | Visión, arquitectura, funcionalidades |

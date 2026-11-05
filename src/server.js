@@ -14,6 +14,7 @@ const VENV_UNIX = path.join(ROOT, ".venv", "bin", "yt-dlp");
 const VENV_WIN = path.join(ROOT, ".venv", "Scripts", "yt-dlp.exe");
 const COOKIES_FILE = path.join(ROOT, "cookies.txt");
 const PORT = Number(process.env.PORT) || 3847;
+const HOST = process.env.HOST || "0.0.0.0";
 const JOB_TTL_MS = 15 * 60 * 1000;
 
 const jobs = new Map();
@@ -523,7 +524,21 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-server.listen(PORT, "127.0.0.1", () => {
+function lanAddresses() {
+  const out = [];
+  for (const list of Object.values(os.networkInterfaces())) {
+    for (const net of list || []) {
+      const v4 = net.family === "IPv4" || net.family === 4;
+      if (v4 && !net.internal) out.push(net.address);
+    }
+  }
+  return out;
+}
+
+server.listen(PORT, HOST, () => {
   console.log(`OmniFetch listo → http://127.0.0.1:${PORT}`);
-  console.log("Mercurio · Instagram, YouTube y TikTok · solo en tu ordenador.");
+  for (const ip of lanAddresses()) {
+    console.log(`En la casa (celular) → http://${ip}:${PORT}`);
+  }
+  console.log("Red Wi‑Fi local. No está abierto a internet. Ctrl+C apaga.");
 });

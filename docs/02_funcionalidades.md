@@ -11,7 +11,7 @@
 
 ## Confianza
 
-- Escucha solo en localhost
+- Escucha en la red de casa (PC y celular en la misma Wi‑Fi). No en internet.
 - Sin cuenta, sin anuncios, sin historial persistente
 - `cookies.txt` opcional (sesión propia)
 

@@ -43,7 +43,7 @@ Persona que quiere archivar **su** contenido o material que tiene derecho a cons
 ## 5. Reglas de negocio
 
 1. Solo URLs de un post/video (no perfiles, canales ni playlists enteras).
-2. El servidor HTTP escucha en localhost.
+2. El servidor HTTP escucha en la red local (`0.0.0.0`) para el PC y el celular de casa. No está publicado en internet. `HOST=127.0.0.1` lo deja solo en esta máquina.
 3. Uso responsable: contenido propio o con permiso.
 4. `cookies.txt` es opcional y nunca se commitea.
 5. La landing de Vercel no incluye el flujo de descarga.

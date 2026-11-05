@@ -24,7 +24,7 @@ Sin anuncios. Sin extensiones. Sin nube.
 
 **Mercurio** es el software open source. **OmniFetch** es el producto: la interfaz con la que descargas.
 
-Mercurio (mensajero) trae el archivo a tu máquina. No es un sitio web de descargas con publicidad. Corre en `127.0.0.1`.
+Mercurio (mensajero) trae el archivo a tu máquina. No es un sitio web de descargas con publicidad. Corre en tu casa: este PC y, si quieres, el celular en la misma Wi‑Fi.
 
 | Sin OmniFetch | Con OmniFetch |
 |---------------|---------------|
@@ -74,7 +74,10 @@ cd mercurio
 npm start
 ```
 
-Abre **http://127.0.0.1:3847**
+En este ordenador: **http://127.0.0.1:3847**  
+En el celular (misma Wi‑Fi): la IP que imprime la terminal, p. ej. **http://192.168.1.19:3847**
+
+Si macOS pregunta por el firewall, permite Node. No abras el puerto en el router: eso sí lo publicaría a internet.
 
 Para apagar: en esa terminal, `Ctrl + C`.
 
@@ -96,7 +99,7 @@ npm run server
 
 ## API (resumen)
 
-Base local: `http://127.0.0.1:3847`
+Base local: `http://127.0.0.1:3847` (o `http://TU-IP:3847` en la red de casa)
 
 | Método | Ruta | Acción |
 |--------|------|--------|

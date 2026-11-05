@@ -24,7 +24,7 @@ No ads. No extensions. No cloud locker.
 
 **Mercurio** is the open-source software. **OmniFetch** is the product: the UI you use to download.
 
-It is not an ad-filled download website. It binds to `127.0.0.1`.
+It is not an ad-filled download website. It binds to your LAN so a phone on the same Wi‑Fi can use it. It is not exposed to the internet.
 
 Use it only with content you own or have the right to save. Respect copyright and each platform’s terms.
 
@@ -40,7 +40,7 @@ cd mercurio
 npm start
 ```
 
-Open **http://127.0.0.1:3847**. Stop with `Ctrl + C`.
+On this computer: **http://127.0.0.1:3847**. On your phone (same Wi‑Fi): the LAN URL printed in the terminal. Stop with `Ctrl + C`.
 
 Later, when published to npm: `npx omnifetch`.
 
